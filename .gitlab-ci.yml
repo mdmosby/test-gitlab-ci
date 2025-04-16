@@ -10,16 +10,20 @@ tags: [cee.build]
 
 build::release:
   stage: build
-  extends: .scriptbase
+  extends:
+  - .scriptbase
 
 build::debug:
   stage: build
-  extends: .scriptbase
+  extends:
+  - .scriptbase
 
 test::fast:
   stage: test
-  extends: .scriptbase
+  extends:
+  - .scriptbase
 
 test::full:
   stage: test
-  extends: .scriptbase
+  extends:
+  - .scriptbase
