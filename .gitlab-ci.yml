@@ -1,0 +1,25 @@
+stages:
+- build
+- test
+
+tags: [cee.build]
+
+.scriptbase:
+  script:
+  - echo "Hello world from the $CI_JOB_NAME job"
+
+build::release:
+  stage: build
+  extends: .scriptbase
+
+build::debug:
+  stage: build
+  extends: .scriptbase
+
+test::fast:
+  stage: test
+  extends: .scriptbase
+
+test::full:
+  stage: test
+  extends: .scriptbase
