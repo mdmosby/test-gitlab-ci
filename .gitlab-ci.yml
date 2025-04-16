@@ -2,9 +2,9 @@ stages:
 - build
 - test
 
-tags: [cee.build]
 
 .scriptbase:
+  tags: [cee.build]
   script:
   - echo "Hello world from the $CI_JOB_NAME job"
 
